@@ -1,3 +1,13 @@
+body {
+    background-image: url(./images/mario2.jpg);
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    font-size: 70px;
+}
+
 p {
     text-align: center;
     
@@ -6,6 +16,7 @@ p {
 .identification {
     font-size: 30px;
     padding-bottom: 20px;
+    padding-top: 40px;
 }
 
 form {
@@ -14,6 +25,8 @@ form {
 
 .pseudo {
     font-size: 25px;
+    color: white;
+
 }
 
 .question {
@@ -32,6 +45,13 @@ form {
     text-align: center;
     margin-left: 70px;
 
+}
+
+.erreur {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 }
  
 

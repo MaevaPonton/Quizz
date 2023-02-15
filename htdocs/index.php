@@ -21,19 +21,35 @@ require_once ('connexion.php');
 <body>
 
 <section class= "form container mt-5">
-<p class='identification'> Afin de pouvoir avoir accès à notre Quizz <br> merci de vous inscrire ou de vous identifier </p>
 
-<form action="inscription.php" method="post" id="formulaire_inscription">
+
+<form action="index.php" method="post" id="formulaire_inscription">
     <input type = 'text' name = 'user_name' id = 'user_name' placeholder = 'Pseudo' required>
     <button type="submit"> S'inscrire </button>
 </form>
 
-
-
-
-
-
 <?php 
+
+$conn = mysqli_connect("127.0.0.1","root","","quizz");
+
+if (isset($_POST['user_name'])){
+    $user_name = $_POST['user_name'];
+
+    $checkuser = "SELECT * FROM users WHERE user_name = '$user_name'";
+    $result = mysqli_query($conn,$checkuser);
+    $count = mysqli_num_rows($result);
+    if($count>0){
+       echo "<p class='erreur'>Ce pseudo n'est plus disponible</p>";
+    }else{
+        $request = $bdd->prepare("INSERT INTO users (user_name) VALUES ( :user_name)");
+
+$request->execute([
+    'user_name' => $user_name
+]);
+}
+}
+
+
 
 // importation des utilisateurs de la base de données
 
@@ -63,6 +79,17 @@ echo"<br>";
         </table>
         </div>";
     }
+
+
+    // A TRAVAILLER POUR LE CHANGEMENT DE COULEUR ALEATOIRE PAR PSEUDO
+/* if(!$alluser){
+        $query = $bdd -> prepare("  INSERT INTO users
+                                    SET  users.user_name = :users, users.color = :color");
+        $query -> execute([ 
+            "users" => $user,
+            "color" => RandomColor::one()
+        ]);
+    } */
 
 ?>
 

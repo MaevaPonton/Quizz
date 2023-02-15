@@ -17,10 +17,9 @@ require_once ('connexion.php');
 
 <body>
 
-<nav class="navbar navbar-expand-lg bg-white">
+<nav class="navbar navbar-expand-lg fixed-top bg-transparent">
   <div class="container">
-    <img src = "./images/quizz.avif" alt="logo" width="280" height="150">
-    <h1> Quizz de Culture Générale </h1>
+    <h1> Quizz Super Mario </h1>
     <form action="index.php" method="post" class="justify-content-end" role="accueil">
       <button class="btn btn-outline-success" type="submit">Accueil</button>
     </form>
