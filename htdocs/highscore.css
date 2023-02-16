@@ -1,0 +1,23 @@
+body {
+    background-image: url(./images/super-mario-galaxy-mario.gif) ;
+    background-size: cover;
+}
+
+.score {
+    margin-top: 200px;
+}
+
+#score {
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    animation: c2 6s steps(5,end) infinite normal;
+}
+
+@keyframes c2 {
+     0% {color: black;}
+    25% {color: black;}
+    50% {color: black;}
+    75% {color: black;}
+    90% {color: white;}
+}

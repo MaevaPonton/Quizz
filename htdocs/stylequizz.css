@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body{
-  background-color: white;
+  background-image: url(./images/super-mario-world-mario.gif);
+  background-size: cover;
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
@@ -17,10 +18,11 @@ body{
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px 5px rgba(100, 100, 100, 0.1);
-  width: 600px;
+  width: 800px;
   overflow: hidden;
+  border: 3px solid black;
 }
-.quiz-header{
+#quiz-header{
   padding: 4rem;
 }
 h2{
@@ -39,7 +41,7 @@ ul li{
 ul li label{
   cursor: pointer;
 }
-button{
+#submit{
   background-color: #03cae4;
   color: #fff;
   border: none;
@@ -50,12 +52,9 @@ button{
   font-family: inherit;
   padding: 1.3rem;
 }
-button:hover{
+#submit:hover{
   background-color: #04adc4;
 }
-button:focus{
-  outline: none;
-  background-color: #44b927;
-}
+
 
  
